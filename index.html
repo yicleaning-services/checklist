@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#494936">
+  <title>YI Cleaning — Чек-лист прибирання</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="YI Cleaning Services — на початок">
+      <span class="brand-name">YI CLEANING</span>
+      <span class="brand-subtitle">SERVICES</span>
+    </a>
+    <section class="progress" aria-label="Загальний прогрес прибирання">
+      <div class="progress-topline"><span class="progress-label">ВИКОНАНО</span><output class="progress-count" id="progress-count" aria-live="polite">0 / 0</output></div>
+      <div class="progress-track" id="progress-track" role="progressbar" aria-label="Виконані завдання" aria-valuemin="0" aria-valuemax="0" aria-valuenow="0"><span class="progress-fill" id="progress-fill"></span></div>
+    </section>
+  </header>
+  <main id="top" class="main-content">
+    <div class="checklist" id="checklist" aria-label="Чек-лист прибирання"></div>
+    <p class="empty-state" id="empty-state" hidden>У чек-листі поки немає завдань.</p>
+  </main>
+  <button class="reset-button" id="reset-button" type="button"><span aria-hidden="true">↺</span> Скинути все</button>
+  <dialog class="confirm-dialog" id="reset-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description">
+    <form method="dialog">
+      <h2 id="dialog-title">Скинути чек-лист?</h2>
+      <p id="dialog-description">Усі позначки виконання буде видалено для цієї вкладки.</p>
+      <div class="dialog-actions"><button class="dialog-button dialog-cancel" value="cancel">Скасувати</button><button class="dialog-button dialog-confirm" id="confirm-reset" value="confirm">Скинути</button></div>
+    </form>
+  </dialog>
+</body>
+</html>
